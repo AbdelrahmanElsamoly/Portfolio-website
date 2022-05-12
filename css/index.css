@@ -829,27 +829,27 @@ svg {
   top: 0%;
 }
 
-.revealo-1 {
+.anime1 {
   animation: anim-1 2s linear forwards;
   -webkit-animation: anim-1 2s linear forwards;
 }
-.revealo-2 {
+.anime2 {
   animation: anim-2 2s linear forwards;
   -webkit-animation: anim-2 2s linear forwards;
 }
-.revealo-3 {
+.anime3 {
   animation: anim-3 2s linear forwards;
   -webkit-animation: anim-3 2s linear forwards;
 }
-.revealo-4 {
+.anime4 {
   animation: anim-4 2s linear forwards;
   -webkit-animation: anim-4 2s linear forwards;
 }
-.revealo-5 {
+.anime5 {
   animation: anim-5 2s linear forwards;
   -webkit-animation: anim-5 2s linear forwards;
 }
-.revealo-6 {
+.anime6 {
   animation: anim-6 2s linear forwards;
   -webkit-animation: anim-6 2s linear forwards;
 }

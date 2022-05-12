@@ -75,34 +75,18 @@ sk.reveal(".textPart2", { origin: "left" });
 right.reveal(".right-part", { origin: "right" });
 right.reveal(".left-part", { origin: "left" });
 // skils design
-
+let reveal = document.getElementsByTagName("circle");
+console.log(reveal);
 function anim() {
-  let reveal = document.getElementsByTagName("circle");
+  var elementTop;
+  var windowHeight = window.innerHeight;
 
   for (var i = 0; i < reveal.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop_1 = reveal[i].getBoundingClientRect().top;
-    var elementTop_2 = reveal[i + 1].getBoundingClientRect().top;
-    var elementTop_3 = reveal[i + 2].getBoundingClientRect().top;
-    var elementTop_4 = reveal[i + 3].getBoundingClientRect().top;
-    var elementTop_5 = reveal[i + 4].getBoundingClientRect().top;
-    var elementTop_6 = reveal[i + 5].getBoundingClientRect().top;
+    var elementTop = reveal[i].getBoundingClientRect().top;
     var elementVisible = 150;
 
-    if (
-      elementTop_1 < windowHeight - elementVisible + 100 ||
-      elementTop_2 < windowHeight - elementVisible + 100 ||
-      elementTop_3 < windowHeight - elementVisible + 100 ||
-      elementTop_4 < windowHeight - elementVisible + 100 ||
-      elementTop_5 < windowHeight - elementVisible + 100 ||
-      elementTop_6 < windowHeight - elementVisible + 100
-    ) {
-      reveal[i].classList.add("revealo-1");
-      reveal[i + 1].classList.add("revealo-2");
-      reveal[i + 2].classList.add("revealo-3");
-      reveal[i + 3].classList.add("revealo-4");
-      reveal[i + 4].classList.add("revealo-5");
-      reveal[i + 5].classList.add("revealo-6");
+    if (elementTop < windowHeight - elementVisible + 100) {
+      reveal[i].classList.add(`anime${1 + i}`);
 
       setInterval(() => {
         if (counter1 === 90) {
@@ -157,12 +141,8 @@ function anim() {
         }
       }, 160);
     } else {
-      reveal[i].classList.remove("revealo-1");
-      reveal[i + 1].classList.remove("revealo-2");
-      reveal[i + 2].classList.remove("revealo-3");
-      reveal[i + 3].classList.remove("revealo-4");
-      reveal[i + 4].classList.remove("revealo-5");
-      reveal[i + 5].classList.remove("revealo-6");
+      reveal[i].classList.remove(`anime${i + 1}`);
+
       counter1 = 0;
       counter2 = 0;
       counter3 = 0;
@@ -172,8 +152,6 @@ function anim() {
     }
   }
 }
-
-console.log(document.getElementsByTagName("lord-icon"));
 
 // particle.js
 particlesJS("particles-js", {
