@@ -49,22 +49,22 @@ $(document).ready(function () {
 
 // scroll design of website________________
 let sT = ScrollReveal({
-  duration: 2500,
+  duration: 1000,
   distance: "15px",
   reset: true,
 });
 
 let sC = ScrollReveal({
-  duration: 3000,
+  duration: 1000,
   distance: "15px",
 });
 let sk = ScrollReveal({
-  duration: 2500,
+  duration: 1000,
   distance: "15px",
   reset: true,
 });
 let right = ScrollReveal({
-  duration: 3000,
+  duration: 1000,
   distance: "15px",
   reset: true,
 });
