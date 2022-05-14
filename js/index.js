@@ -76,7 +76,6 @@ right.reveal(".right-part", { origin: "right" });
 right.reveal(".left-part", { origin: "left" });
 // skils design
 let reveal = document.getElementsByTagName("circle");
-console.log(reveal);
 function anim() {
   var elementTop;
   var windowHeight = window.innerHeight;
